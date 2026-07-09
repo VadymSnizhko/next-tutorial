@@ -1,0 +1,12 @@
+.headertitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ulnavigator{
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+}
