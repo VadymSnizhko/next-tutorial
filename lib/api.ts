@@ -1,14 +1,17 @@
 import axios from "axios"
-/*
+
 import type {Note} from "@/types/note"
 
 const API = axios.create({
-    baseURL: ""
+    baseURL: "https://next-v1-notes-api.goit.study"
 })
 
-function getnotes(): Promose<{note: Note[]; to}> {}
+export async function getNotes(): Promise<{notes: Note[]; total: number }> {
+    const {data} = await API.get<{notes: Note[]; total: number}>("/notes")
+    return data
+}
 
-function getNote() {
+export async function getNote(id: Note["id"]): Promise<Note> {
     const {data} = await API.get<Note>(`/note/${id}`)
     return data
-}*/
+}

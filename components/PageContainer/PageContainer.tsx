@@ -1,4 +1,6 @@
 import css from './PageContainer.module.css'
+import container from '@/app/container.module.css'
+
 type PageContainerProps = {
     title: string
     description?: string
@@ -7,9 +9,9 @@ type PageContainerProps = {
 
 const PageContainer = ({title, description, children}:PageContainerProps) => {
     return (
-        <div className={css.page}>
+        <div className={container.container}>
             <div>
-                <h1>
+                <h1 className={css.title}>
                     {title}
                 </h1>
                 {description && (

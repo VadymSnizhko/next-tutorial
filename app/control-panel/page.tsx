@@ -1,9 +1,13 @@
+import PageContainer from "@/components/PageContainer/PageContainer"
+
 const Control_panel = () => {
     return (
+
         <div>
-            <h1>
-                Page Control Panel
-            </h1>
+            <PageContainer
+                title = 'Page Control Panel'
+                description="This page control..."
+                />
         </div>
     )
 }

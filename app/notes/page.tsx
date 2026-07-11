@@ -1,13 +1,20 @@
 import PageContainer from "@/components/PageContainer/PageContainer"
 
-const Notes = () => {
+import NoteList from "@/components/NoteList/NoteList"
+
+import { getNotes } from "@/lib/api"
+
+const Notes = async () => {
+    const respons = await getNotes()
+
     return (
-        <div>
-            <PageContainer
-            title = "Page Notes"
-            description = "Brows notes ..." 
-            />
-        </div>
+        <PageContainer
+            title="Page Notes"
+            description="Brows notes, this page can show dinamic notes ..."
+        >
+            <NoteList notes={respons.notes}/>
+        </PageContainer>
+
     )
 }
 

@@ -13,7 +13,7 @@ async function Notes ({params}: NoteProps) {
 
     return (
         <div>
-            <h1>Notes dinamic {id}</h1>
+            <h1>This Notes dinamic: {id}</h1>
         </div>
     )
 }
