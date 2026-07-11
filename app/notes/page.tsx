@@ -8,12 +8,15 @@ const Notes = async () => {
     const respons = await getNotes()
 
     return (
-        <PageContainer
-            title="Page Notes"
-            description="Brows notes, this page can show dinamic notes ..."
-        >
-            <NoteList notes={respons.notes}/>
-        </PageContainer>
+        <div>
+            <PageContainer
+                title="Page Notes"
+                description="Brows notes, this page can show dinamic notes ..."
+            >
+                <NoteList notes={respons.notes} />
+            </PageContainer>
+        </div>
+
 
     )
 }
