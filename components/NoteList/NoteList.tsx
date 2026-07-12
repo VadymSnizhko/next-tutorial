@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import css from './NoteList.module.css'
+
 import type { Note } from '@/types/note'
 
 interface NoteListProps {
@@ -12,11 +14,11 @@ const NoteList = ({ notes }: NoteListProps) => {
             <ul>
                 {notes.map(note => (
                     <li key={note.id}>
-                        <h3><Link href={`/notes/${note.id}`}>
+                        <p className={css.title}><b><Link href={`/notes/${note.id}`}>
                             {note.title}
-                        </Link></h3>
+                        </Link></b></p>
                         
-                        <p>{note.content}</p>
+                        <p className={css.textcontent}>{note.content}</p>
                         
                     </li>
                 ))}

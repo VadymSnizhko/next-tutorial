@@ -1,3 +1,7 @@
+import {getNote} from '@/lib/api'
+
+import NoteDetailsClient from './NoteDetails.client'
+
 interface NoteProps {
     params: Promise<{id: string}>
 }
@@ -9,11 +13,13 @@ interface NoteProps {
 
 async function Notes ({params}: NoteProps) {
     const {id} = await params
+    const note = await getNote(id)
     
 
     return (
         <div>
-            <h1>This Notes dinamic: {id}</h1>
+            <NoteDetailsClient/>
+
         </div>
     )
 }

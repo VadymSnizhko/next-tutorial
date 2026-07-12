@@ -9,12 +9,12 @@ const Notes = async () => {
 
     return (
         <div>
-            <PageContainer
-                title="Page Notes"
-                description="Brows notes, this page can show dinamic notes ..."
-            >
-                <NoteList notes={respons.notes} />
-            </PageContainer>
+          <PageContainer
+            title="Page Notes"
+            description="Brows notes, this page can show dinamic notes ..."
+        >
+            <NoteList notes={respons.notes}/>
+        </PageContainer>          
         </div>
 
 
