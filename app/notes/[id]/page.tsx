@@ -15,10 +15,10 @@ async function Notes ({params}: NoteProps) {
     const {id} = await params
     const note = await getNote(id)
     
-
+    //<NoteDetailsClient/>
     return (
         <div>
-            <NoteDetailsClient/>
+            {note.title}
 
         </div>
     )
