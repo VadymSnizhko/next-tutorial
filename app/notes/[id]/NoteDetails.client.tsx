@@ -1,9 +1,12 @@
 "use client"
 
 import { formToJSON } from "axios"
+import { useRouter } from "next/router"
 import { useState } from "react"
 
 const NoteDetailsClient = () => {
+
+    const router = useRouter()
 
     const [isEdit, setIsEdit] = useState<boolean>(false)
 
@@ -11,8 +14,13 @@ const NoteDetailsClient = () => {
         setIsEdit(prevIsEdit => !prevIsEdit)
     }
 
+    const handleBack = () => {
+        router.push("/notes")
+    }
+
     return (
         <div>
+            <button onClick={() => handleBack()}>Back</button>
             <button onClick={() => toggleEdit()}>Edit</button>
 
             {isEdit ? (
