@@ -7,19 +7,22 @@ const API = axios.create({
 })
 
 export async function getNotes(categoryId?: string): Promise<{notes: Note[]; total: number }> {
-    return new Promise(async (resolve, reject) => {
-        try {
-           const {data} = await API.get<{notes: Note[]; total: number}>("/notes") 
-           resolve(data)
-           params: {categoryId}
-        }
-        catch(error) {
-            reject(error)
-        }
-    }
-        )
+    //return new Promise(async (resolve, reject) => {
+    //    try {
+           const {data} = await API.get<{notes: Note[]; total: number}>("/notes",{
+            params:{
+                categoryId
+            }
+           } ) 
+    //       resolve(data)
+    //    }
+    //    catch(error) {
+    //       reject(error)
+    //   }
+    //}
+    //)
     //const {data} = await API.get<{notes: Note[]; total: number}>("/notes")
-    //return data
+    return data
 }
 
 export async function getNote(id: Note["id"]): Promise<Note> {

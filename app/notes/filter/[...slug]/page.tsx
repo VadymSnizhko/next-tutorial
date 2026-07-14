@@ -14,7 +14,9 @@ const NotesByCategory = async ({ params }: Props) => {
   const category = slug[0] === 'all' ? undefined : slug[0];
   const response = await getNotes(category);
 
-  //console.log(slug)
+  console.log(slug)
+  console.log(category)
+
   const handleGoBack = () => {};
 
   return (
