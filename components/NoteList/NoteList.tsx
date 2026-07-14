@@ -19,6 +19,8 @@ const NoteList = ({ notes }: NoteListProps) => {
                         </Link></b></p>
                         
                         <p className={css.textcontent}>{note.content}</p>
+                        <strong>{note.category.name}</strong>
+                        <p>{note.category.id}</p>
                         
                     </li>
                 ))}

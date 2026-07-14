@@ -1,7 +1,9 @@
 "use client"
 
+import PageContainer from "@/components/PageContainer/PageContainer"
+
 import { formToJSON } from "axios"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 const NoteDetailsClient = () => {
@@ -15,8 +17,10 @@ const NoteDetailsClient = () => {
     }
 
     const handleBack = () => {
-        router.push("/notes")
+        router.push("/notes/filter/all")
     }
+
+    
 
     return (
         <div>
@@ -33,11 +37,11 @@ const NoteDetailsClient = () => {
                     </div>
                 </form>
             ) : (
-                <div>
-                    <h1>Title</h1>
-                    <p>Content</p>
-                    <strong>Category</strong>
-                </div>
+                <PageContainer
+                    title="Content"
+                    description="Content"
+                    category="Category"
+                />
 
             )}
         </div>

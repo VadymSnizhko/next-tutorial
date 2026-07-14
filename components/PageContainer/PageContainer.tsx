@@ -4,10 +4,11 @@ import container from '@/app/container.module.css'
 type PageContainerProps = {
     title: string
     description?: string
+    category?: string
     children?: React.ReactNode
 }
 
-const PageContainer = ({title, description, children}:PageContainerProps) => {
+const PageContainer = ({title, description, category, children}:PageContainerProps) => {
     return (
         <div className={container.container}>
             <div>
@@ -16,6 +17,10 @@ const PageContainer = ({title, description, children}:PageContainerProps) => {
                 </h1>
                 {description && (
                     <p>{description}</p>
+                )}
+
+                {category && (
+                    <p>{category}</p>
                 )}
 
                 {children && (

@@ -1,8 +1,10 @@
+import PageContainer from "@/components/PageContainer/PageContainer"
+
 const Loading = () => {
     return (
-        <div>
-            <h1>Loading...</h1>
-        </div>
+        <PageContainer
+        title="loading..."
+        />
     )
 }
 

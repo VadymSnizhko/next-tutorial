@@ -1,5 +1,7 @@
 import {getNote} from '@/lib/api'
 
+import PageContainer from "@/components/PageContainer/PageContainer"
+
 import NoteDetailsClient from './NoteDetails.client'
 
 interface NoteProps {
@@ -15,12 +17,16 @@ async function Notes ({params}: NoteProps) {
     const {id} = await params
     const note = await getNote(id)
     
-    //<NoteDetailsClient/>
+    //
+    /**
+     *         <PageContainer
+            title = {note.title}
+            description={note.content}
+            category={note.category.name}
+        />
+     */
     return (
-        <div>
-            {note.title}
-
-        </div>
+        <NoteDetailsClient/>
     )
 }
 
