@@ -20,7 +20,7 @@ const PageContainer = ({title, description, category, children}:PageContainerPro
                 )}
 
                 {category && (
-                    <p>{category}</p>
+                    <strong>Category: {category}</strong>
                 )}
 
                 {children && (

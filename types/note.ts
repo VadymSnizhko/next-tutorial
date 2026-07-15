@@ -8,3 +8,11 @@ export interface Note {
     }
     createAt: string
 }
+
+export type Category = {
+  id: string;
+  name: string;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+};

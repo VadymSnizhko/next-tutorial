@@ -12,13 +12,13 @@ type Props = {
 const Modal = ({ children }: Props) => {
   const router = useRouter();
   
-  const close = () => router.back();
+  const back = () => router.back();
 
   return (
     <div className={css.backdrop}>
       <div className={css.modal}>
         {children}
-        <button onClick={close}>Close</button>
+        <button onClick={back}>Back</button>
       </div>
     </div>
   );

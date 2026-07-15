@@ -1,18 +1,18 @@
 import axios from "axios"
 
-import type {Note} from "@/types/note"
+import type {Note, Category} from "@/types/note"
 
 const API = axios.create({
     baseURL: "https://next-v1-notes-api.goit.study"
 })
-
+/*
 export type Category = {
   id: string;
   name: string;
   description: string;
   createdAt: string;
   updatedAt: string;
-};
+};*/
 
 export async function getNotes(categoryId?: string): Promise<{notes: Note[]; total: number }> {
     //return new Promise(async (resolve, reject) => {
@@ -34,10 +34,10 @@ export async function getNotes(categoryId?: string): Promise<{notes: Note[]; tot
 }
 
 export const getCategories = async () => {
-  console.log("Start")
+  //console.log("Start")
   const res = await API.get<Category[]>('/categories');
 
-  console.log(res)
+  //console.log(res)
   return res.data;
 };
 

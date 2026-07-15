@@ -13,15 +13,17 @@ const NoteList = ({ notes }: NoteListProps) => {
         <div>
             <ul>
                 {notes.map(note => (
-                    <li key={note.id}>
-                        <p className={css.title}><b><Link href={`/notes/${note.id}`}>
+                    <li key={note.id} className={css.field}>
+                        <strong className={css.title}>
+                            <Link href={`/notes/${note.id}`}>
                             {note.title}
-                        </Link></b></p>
-                        
+                            </Link>
+                        </strong>
+
                         <p className={css.textcontent}>{note.content}</p>
-                        <strong>{note.category.name}</strong>
-                        <p>{note.category.id}</p>
-                        
+                        <strong>Category: {note.category.name}</strong>
+                        <br/>
+
                     </li>
                 ))}
             </ul>

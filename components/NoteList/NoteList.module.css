@@ -6,3 +6,8 @@
     padding-top: 5px;
     padding-bottom: 10px;
 }
+
+.field{
+    border-bottom: black;
+    border-bottom-style: solid;
+}
