@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/Header/Header"
 import Footer from "@/components/Footer/Footer";
+//import modal from "@/app/@modal/default"
 
 import TanstacProvide from "@/components/TanStackProvider/TanStackProvider";
 
@@ -24,8 +25,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html
@@ -36,6 +39,7 @@ export default function RootLayout({
         <TanstacProvide>
           <Header />
           {children}
+          {modal}
           <Footer />
         </TanstacProvide>
 

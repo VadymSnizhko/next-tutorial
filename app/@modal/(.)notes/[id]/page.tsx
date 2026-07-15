@@ -1,8 +1,8 @@
 import {getNote} from '@/lib/api'
+import Modal from '@/components/Modal/Modal';
 
-import PageContainer from "@/components/PageContainer/PageContainer"
+//import PageContainer from "@/components/PageContainer/PageContainer"
 
-import NoteDetailsClient from './NoteDetails.client'
 
 interface NoteProps {
     params: Promise<{id: string}>
@@ -16,17 +16,13 @@ interface NoteProps {
 async function Notes ({params}: NoteProps) {
     const {id} = await params
     const note = await getNote(id)
-    
-    //
-    /**
-     *         <NoteDetailsClient/>
-     */
+
     return (
-        <PageContainer
+        <Modal>
             title = {note.title}
             description={note.content}
-            category={note.category.name}
-        />
+            category={note.category.name}            
+        </Modal>
     )
 }
 
